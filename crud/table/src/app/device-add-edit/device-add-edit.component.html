@@ -1,0 +1,43 @@
+<div Mat-dialog-title>
+  <h1>New Devices</h1>
+</div>
+<form [formGroup]="empForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline">
+        <mat-label>device name</mat-label>
+        <input matInput type="text" placeholder="device name" formControlName="device_name">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>price</mat-label>
+        <input matInput type="number" placeholder="price" formControlName="price">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>battery</mat-label>
+        <input matInput type="text" placeholder="battery" formControlName="battery">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>processor</mat-label>
+        <input matInput type="text" placeholder="processor" formControlName="processor">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label> rare camera</mat-label>
+        <input matInput type="text" placeholder="rare camera" formControlName="rare_camera">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>back camera</mat-label>
+        <input matInput type="text" placeholder="back camera" formControlName="back_camera">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>display</mat-label>
+        <input matInput type="text" placeholder="display" formControlName="display">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="action">
+    <button mat-raised-button color="warn" type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data? 'Update' : 'Save'}}</button>
+  </div>
+</form>
